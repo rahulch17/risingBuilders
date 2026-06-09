@@ -129,16 +129,26 @@ unset($__errorArgs, $__bag); ?>
 
                         <div class="form-group <?php echo e($errors->has('service') ? 'has-error' : ''); ?>">
                             <label for="service">Service of Interest</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <option value="<?php echo e($service['slug']); ?>"
-                                        <?php echo e(old('service') === $service['slug'] ? 'selected' : ''); ?>>
-                                        <?php echo e($service['name']); ?>
+                        <select id="service" name="service" onchange="toggleOtherService(this)">
+                            <option value="">Select a service</option>
+                            <?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($service['slug']); ?>"
+                                    <?php echo e(old('service') === $service['slug'] ? 'selected' : ''); ?>>
+                                    <?php echo e($service['name']); ?>
 
-                                    </option>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                            </select>
+                                </option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <option value="other" <?php echo e(old('service') === 'other' ? 'selected' : ''); ?>>
+                                Other
+                            </option>
+                        </select>
+
+<div id="other-service-box" style="display:none; margin-top:12px;">
+    <label for="other_service">Please specify *</label>
+    <textarea id="other_service" name="other_service"
+              rows="3"
+              placeholder="Tell us what service you need..."><?php echo e(old('other_service')); ?></textarea>
+</div>
                             <?php $__errorArgs = ['service'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -188,7 +198,21 @@ unset($__errorArgs, $__bag); ?>
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 </section>
-
+<?php $__env->startPush('scripts'); ?>
+<script>
+    function toggleOtherService(select) {
+        const box = document.getElementById('other-service-box');
+        box.style.display = select.value === 'other' ? 'block' : 'none';
+    }
+    // keep visible on validation error reload
+    document.addEventListener('DOMContentLoaded', function () {
+        const select = document.getElementById('service');
+        if (select.value === 'other') {
+            document.getElementById('other-service-box').style.display = 'block';
+        }
+    });
+</script>
+<?php $__env->stopPush(); ?>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\6th sem\risingBuilders\resources\views/pages/contact/index.blade.php ENDPATH**/ ?>

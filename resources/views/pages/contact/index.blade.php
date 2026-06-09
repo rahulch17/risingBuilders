@@ -110,15 +110,25 @@
 
                         <div class="form-group {{ $errors->has('service') ? 'has-error' : '' }}">
                             <label for="service">Service of Interest</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                @foreach ($services as $service)
-                                    <option value="{{ $service['slug'] }}"
-                                        {{ old('service') === $service['slug'] ? 'selected' : '' }}>
-                                        {{ $service['name'] }}
-                                    </option>
-                                @endforeach
-                            </select>
+                        <select id="service" name="service" onchange="toggleOtherService(this)">
+                            <option value="">Select a service</option>
+                            @foreach ($services as $service)
+                                <option value="{{ $service['slug'] }}"
+                                    {{ old('service') === $service['slug'] ? 'selected' : '' }}>
+                                    {{ $service['name'] }}
+                                </option>
+                            @endforeach
+                            <option value="other" {{ old('service') === 'other' ? 'selected' : '' }}>
+                                Other
+                            </option>
+                        </select>
+
+<div id="other-service-box" style="display:none; margin-top:12px;">
+    <label for="other_service">Please specify *</label>
+    <textarea id="other_service" name="other_service"
+              rows="3"
+              placeholder="Tell us what service you need...">{{ old('other_service') }}</textarea>
+</div>
                             @error('service')
                                 <span class="form-error">{{ $message }}</span>
                             @enderror
@@ -154,5 +164,19 @@
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 </section>
-
+@push('scripts')
+<script>
+    function toggleOtherService(select) {
+        const box = document.getElementById('other-service-box');
+        box.style.display = select.value === 'other' ? 'block' : 'none';
+    }
+    // keep visible on validation error reload
+    document.addEventListener('DOMContentLoaded', function () {
+        const select = document.getElementById('service');
+        if (select.value === 'other') {
+            document.getElementById('other-service-box').style.display = 'block';
+        }
+    });
+</script>
+@endpush
 @endsection
