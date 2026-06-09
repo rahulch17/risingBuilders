@@ -1,7 +1,9 @@
 
 <nav class="navbar" id="navbar">
     <div class="nav-inner">
-        <a href="<?php echo e(route('home')); ?>" class="nav-logo">RISING BUILDERS</a>
+        <a href="<?php echo e(route('home')); ?>" class="nav-logo">
+            <img src="<?php echo e(asset('images/logo.jpeg')); ?>" alt="Rising Builders" class="nav-logo-img" />
+        </a>
 
         <ul class="nav-links">
             <li>

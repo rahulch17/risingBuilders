@@ -43,22 +43,22 @@
     </section>
 
     
-    <section class="about-stats-section">
+    <section class="about-stats-section" style="background:#f5f3ef; padding: 72px 48px;">
         <div class="services-inner">
             <div class="services-header reveal">
                 <div>
                     <p class="section-label">HOW WE WORK</p>
-                    <h2 class="services-title">OUR PROCESS</h2>
+                    <h2 class="services-title" style="color:#0a1628;">OUR PROCESS</h2>
                 </div>
             </div>
             <div class="process-grid">
                 <?php $__currentLoopData = $process; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $index => $step): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                    <div class="process-step reveal <?php echo e($index > 0 ? 'reveal-delay-'.$index : ''); ?>">
-                        <span class="process-number"><?php echo e(str_pad($loop->iteration, 2, '0', STR_PAD_LEFT)); ?></span>
-                        <h3><?php echo e($step['title']); ?></h3>
-                        <p><?php echo e($step['description']); ?></p>
-                    </div>
+            <div class="process-step reveal <?php echo e($index > 0 ? 'reveal-delay-'.$index : ''); ?>" style="background:#ffffff; padding:32px 24px; border:1px solid rgba(10,22,40,0.08);">
+                <span class="process-number" style="color:rgba(10,22,40,0.07);"><?php echo e(str_pad($loop->iteration, 2, '0', STR_PAD_LEFT)); ?></span>
+                <h3 style="color:#0a1628;"><?php echo e($step['title']); ?></h3>
+                <p style="color:#4a5568;"><?php echo e($step['description']); ?></p>
+            </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
