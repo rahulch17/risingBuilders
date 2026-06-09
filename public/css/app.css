@@ -1329,3 +1329,47 @@ body {
 .team-bio {
   color: #4a5568 !important;
 }
+
+/* ===================== STATS SECTION FIX ===================== */
+.about-stats-section {
+  background: #0a1628 !important;
+  padding: 80px 48px !important;
+}
+.about-stats-section .stat-num {
+  color: #75a2e6 !important;
+  font-size: 56px;
+}
+.about-stats-section .stat-label {
+  color: rgba(255,255,255,0.5) !important;
+}
+.about-stats-section .stats-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.about-stats-section .stat {
+  padding: 40px 32px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.3s;
+}
+.about-stats-section .stat:last-child {
+  border-right: none;
+}
+.about-stats-section .stat:hover {
+  background: rgba(255,255,255,0.04);
+}
+/* ===================== TEAM CARD GLOW ===================== */
+.team-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(117,162,230,0.4),
+              0 0 60px rgba(117,162,230,0.15),
+              0 20px 40px rgba(10,22,40,0.2) !important;
+  border: 1px solid rgba(117,162,230,0.5);
+}
+.team-card:hover .team-info h3 {
+  color: #75a2e6 !important;
+}

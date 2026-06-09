@@ -69,19 +69,19 @@ class CompanyService
                 'name'  => 'Jonathan Reed',
                 'role'  => 'Director of Engineering',
                 'bio'   => '28 years of structural engineering experience across 6 continents.',
-                'photo' => 'team-1.jpg',
+                'photo' => 'engineer.jpg',
             ],
             [
                 'name'  => 'Sarah Mitchell',
                 'role'  => 'Head of Architecture',
                 'bio'   => 'Award-winning architect specialising in sustainable high-rise design.',
-                'photo' => 'team-2.jpg',
+                'photo' => 'architect.avif',
             ],
             [
                 'name'  => 'David Park',
                 'role'  => 'Civil Infrastructure Lead',
                 'bio'   => 'Led landmark bridge and transportation projects in 12 countries.',
-                'photo' => 'team-3.jpg',
+                'photo' => 'infrastructure lead.jpg',
             ],
         ];
     }
