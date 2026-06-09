@@ -17,7 +17,6 @@
             <h1 class="page-hero-title">LET'S BUILD<br>TOGETHER</h1>
             <p class="page-hero-sub">Our team is ready to discuss your next landmark project.</p>
         </div>
-        @include('components.wave-divider')
     </section>
 
     {{-- ==================== CONTACT CONTENT ==================== --}}
@@ -143,5 +142,17 @@
 
         </div>
     </section>
+    {{-- ==================== MAP ==================== --}}
+<section class="map-section">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4010.850883314349!2d85.33556787595197!3d27.70207557618559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1900240b98e1%3A0x9484a4a269c20db1!2sRising%20Builders%20%26%20Engineers%20Pvt.%20Ltd.!5e1!3m2!1sen!2snp!4v1780995338761!5m2!1sen!2snp"
+        width="100%"
+        height="480"
+        style="border:0; display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
 
 @endsection
