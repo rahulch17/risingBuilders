@@ -148,6 +148,11 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
   z-index: 1;
 }
+.about {
+  background: #ffffff !important;
+  position: relative;
+  z-index: 2;
+}
 
 .luxury-divider {
   animation: dividerFadeIn 0.8s ease-out forwards;
@@ -1372,4 +1377,45 @@ body {
 }
 .team-card:hover .team-info h3 {
   color: #75a2e6 !important;
+}
+/* ===================== NAVBAR CENTERED LINKS ===================== */
+.nav-inner {
+  position: relative;
+  justify-content: space-between;
+}
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 !important;
+}
+/* ===================== NAVBAR ALWAYS VISIBLE ===================== */
+.navbar {
+  background: rgba(10,22,40,0.95) !important;
+}
+
+/* ===================== HERO DIAGONAL FIX ===================== */
+.hero {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%) !important;
+  margin-bottom: -60px;
+}
+
+.navbar {
+  background: #ffffff !important;
+}
+.navbar.scrolled {
+  background: #ffffff !important;
+  box-shadow: 0 2px 20px rgba(10,22,40,0.1) !important;
+}
+.nav-links a {
+  color: #0a1628 !important;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #75a2e6 !important;
+}
+.btn-quote {
+  background: #0a1628 !important;
+  color: #ffffff !important;
+  border-color: #0a1628 !important;
 }
