@@ -12,7 +12,7 @@ A professional construction company website built with Laravel 12, featuring a f
 | Templating | Blade |
 | Styling | Custom CSS (no Tailwind) |
 | Asset Pipeline | Vite |
-| Database | SQLite (contact form inquiries) |
+| Database | MYSQL (contact form inquiries) |
 | Fonts | Google Fonts — Barlow, Barlow Condensed, Playfair Display, Bebas Neue, Baskervville |
 
 ---
