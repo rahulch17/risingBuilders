@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===================== NAVBAR ===================== */
+/* - NAVBAR - */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -136,7 +136,7 @@ body {
 .nav-mobile .btn-quote { align-self: flex-start; margin-top: 8px; }
 .nav-mobile.open { display: flex; }
 
-/* ===================== HOME HERO ===================== */
+/* - HOME HERO - */
 .hero {
   position: relative;
   height: 100vh;
@@ -243,7 +243,7 @@ body {
 }
 .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
-/* ===================== PAGE HERO (inner pages) ===================== */
+/* - PAGE HERO (inner pages) - */
 .page-hero {
   position: relative;
   height: 70vh;
@@ -299,7 +299,7 @@ body {
   max-width: 520px;
 }
 
-/* ===================== BUTTONS ===================== */
+/* - BUTTONS - */
 .btn-outline {
   font-family: var(--font-cond);
   font-size: 11px;
@@ -355,7 +355,7 @@ body {
 .btn-outline-white:hover { border-color: var(--gold); color: var(--gold); }
 .mt-8 { margin-top: 2rem; }
 
-/* ===================== SECTION LABEL ===================== */
+/* - SECTION LABEL - */
 .section-label {
   font-family: var(--font-cond);
   font-size: 10px;
@@ -367,7 +367,7 @@ body {
 }
 .section-label.light { color: rgba(255,255,255,0.55); }
 
-/* ===================== ABOUT ===================== */
+/* - ABOUT - */
 .about, .about-mission {
   background: var(--off-white);
   padding: 96px 48px 110px;
@@ -448,7 +448,7 @@ body {
   text-transform: uppercase;
 }
 
-/* ===================== ABOUT STATS SECTION ===================== */
+/* - ABOUT STATS SECTION - */
 .about-stats-section {
   background: var(--off-white);
   padding: 72px 48px;
@@ -462,7 +462,7 @@ body {
   gap: 32px;
 }
 
-/* ===================== SERVICES ===================== */
+/* - SERVICES - */
 .services {
   background: var(--navy);
   padding: 96px 48px;
@@ -573,7 +573,7 @@ body {
   font-weight: 700;
 }
 
-/* ===================== PROCESS ===================== */
+/* - PROCESS - */
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -610,7 +610,7 @@ body {
   line-height: 1.7;
 }
 
-/* ===================== PORTFOLIO ===================== */
+/* - PORTFOLIO - */
 .portfolio {
   background: var(--off-white);
   padding: 96px 48px;
@@ -792,7 +792,7 @@ body {
 .portfolio-pagination a:hover { background: var(--navy); color: var(--white); }
 .portfolio-pagination .active span { background: var(--navy); color: var(--white); }
 
-/* ===================== AWARDS ===================== */
+/* - AWARDS - */
 .awards { background: var(--navy); padding: 80px 48px; }
 .awards-inner { max-width: 1280px; margin: 0 auto; }
 .awards-title {
@@ -831,7 +831,7 @@ body {
   text-transform: uppercase;
 }
 
-/* ===================== CTA ===================== */
+/* - CTA - */
 .cta {
   background: var(--navy-mid);
   padding: 100px 48px;
@@ -874,7 +874,7 @@ body {
 }
 .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-/* ===================== TEAM ===================== */
+/* - TEAM - */
 .team-section {
   background: var(--off-white);
   padding: 96px 48px;
@@ -927,7 +927,7 @@ body {
   line-height: 1.7;
 }
 
-/* ===================== CONTACT ===================== */
+/* - CONTACT - */
 .contact-section, .contact-page {
   background: var(--white);
   padding: 80px 48px 100px;
@@ -1043,7 +1043,7 @@ body {
 .map-section { line-height: 0; }
 .map-section iframe { display: block; }
 
-/* ===================== FOOTER ===================== */
+/* - FOOTER - */
 .footer {
   background: var(--navy);
   border-top: 1px solid rgba(255,255,255,0.07);
@@ -1092,7 +1092,7 @@ body {
   text-transform: uppercase;
 }
 
-/* ===================== SCROLL REVEAL ===================== */
+/* - SCROLL REVEAL - */
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -1103,7 +1103,7 @@ body {
 .reveal-delay-2 { transition-delay: 0.24s; }
 .reveal-delay-3 { transition-delay: 0.36s; }
 
-/* ===================== RESPONSIVE ===================== */
+/* - RESPONSIVE - */
 @media (max-width: 1024px) {
   .about-inner { grid-template-columns: 1fr; gap: 56px; }
   .about-img-wrap { order: -1; padding-bottom: 32px; }
@@ -1158,7 +1158,7 @@ body {
   .portfolio-bottom-row { grid-template-columns: 1fr; }
   .portfolio-grid--all { grid-template-columns: 1fr; }
   .portfolio-card { height: 240px; }
-}/* ===================== PROCESS ENHANCED ===================== */
+}/* - PROCESS ENHANCED - */
 .about-stats-section {
   background: #f5f3ef;
   padding: 96px 48px;
@@ -1228,7 +1228,7 @@ body {
   line-height: 1.8;
 }
 
-/* ===================== PROCESS DARK OVERRIDE ===================== */
+/* - PROCESS DARK OVERRIDE - */
 .process-step {
   background: #0d1f3c !important;
   padding: 40px 28px 36px;
@@ -1303,7 +1303,7 @@ body {
   color: #75a2e6 !important;
 }
 
-/* ===================== TEAM SECTION FIX ===================== */
+/* - TEAM SECTION FIX - */
 .team-section {
   background: #f5f3ef;
 }
@@ -1335,7 +1335,7 @@ body {
   color: #4a5568 !important;
 }
 
-/* ===================== STATS SECTION FIX ===================== */
+/* STATS SECTION FIX       */
 .about-stats-section {
   background: #0a1628 !important;
   padding: 80px 48px !important;
@@ -1363,7 +1363,7 @@ body {
 .about-stats-section .stat:hover {
   background: rgba(255,255,255,0.04);
 }
-/* ===================== TEAM CARD GLOW ===================== */
+/* - TEAM CARD GLOW - */
 .team-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -1378,7 +1378,7 @@ body {
 .team-card:hover .team-info h3 {
   color: #75a2e6 !important;
 }
-/* ===================== NAVBAR CENTERED LINKS ===================== */
+/* - NAVBAR CENTERED LINKS - */
 .nav-inner {
   position: relative;
   justify-content: space-between;
@@ -1389,12 +1389,12 @@ body {
   transform: translateX(-50%);
   margin: 0 !important;
 }
-/* ===================== NAVBAR ALWAYS VISIBLE ===================== */
+/* - NAVBAR ALWAYS VISIBLE  */
 .navbar {
   background: rgba(10,22,40,0.95) !important;
 }
 
-/* ===================== HERO DIAGONAL FIX ===================== */
+/* - HERO DIAGONAL FIX - */
 .hero {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%) !important;
   margin-bottom: -60px;
